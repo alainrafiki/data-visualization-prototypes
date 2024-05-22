@@ -1,7 +1,7 @@
-// Define the data to use here
+// Define the data to use for the visuzation
 var targetValue = 2484;
-var minValue = 4369;
-var maxValue = 8731;
+var minValue = 0;
+var maxValue = 5000;
 
 // Define the ranges
 var range1 = [minValue, targetValue - 1];
