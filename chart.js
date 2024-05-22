@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var layoutHeight = 400;
     var layoutMargin = { t: 0, b: 0 };
 
-    var data = [
+    var data1 = [
         {
             type: "indicator",
             mode: "gauge+number",
@@ -32,11 +32,63 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     ];
 
-    var layout = {
+    var layout1 = {
         width: layoutWidth,
         height: layoutHeight,
         margin: layoutMargin
     };
 
-    Plotly.newPlot('myDiv', data, layout);
+    Plotly.newPlot('myDiv', data1, layout1);
+
+    var data2 = [
+        {
+            type: "indicator",
+            mode: "gauge+number",
+            value: gaugeValue,
+            gauge: {
+                axis: { range: gaugeRange },
+                bar: { color: "darkblue" },
+                steps: gaugeSteps,
+                threshold: {
+                    line: { color: thresholdLineColor, width: thresholdLineWidth },
+                    thickness: thresholdThickness,
+                    value: thresholdValue
+                }
+            }
+        }
+    ];
+
+    var layout2 = {
+        width: layoutWidth,
+        height: layoutHeight,
+        margin: layoutMargin
+    };
+
+    Plotly.newPlot('myDiv2', data2, layout2);
+
+    var data3 = [
+        {
+            type: "indicator",
+            mode: "gauge+number",
+            value: gaugeValue,
+            gauge: {
+                axis: { range: gaugeRange },
+                bar: { color: "darkblue" },
+                steps: gaugeSteps,
+                threshold: {
+                    line: { color: thresholdLineColor, width: thresholdLineWidth },
+                    thickness: thresholdThickness,
+                    value: thresholdValue
+                }
+            }
+        }
+    ];
+
+    var layout3 = {
+        width: layoutWidth,
+        height: layoutHeight,
+        margin: layoutMargin
+    };
+
+    Plotly.newPlot('myDiv3', data3, layout3);
 });
