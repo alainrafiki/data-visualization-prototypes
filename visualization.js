@@ -8,7 +8,7 @@ var range1 = [minValue, targetValue - 1];
 var range2 = [targetValue, targetValue];
 var range3 = [targetValue + 1, maxValue];
 
-// Create the trace
+// Create the trace to show
 var trace = {
     x: [range1, range2, range3],
     y: [targetValue, targetValue, targetValue],
