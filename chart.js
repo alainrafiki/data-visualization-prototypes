@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var layout = {
             width: document.getElementById(chartId).clientWidth,
-            height: document.getElementById(chartId).clientHeight,
+            height: document.getElementById(chartId).clientWidth * 0.66, // Maintain 4:3 aspect ratio
             margin: { t: 0, b: 0 }
         };
 
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('resize', function() {
             Plotly.relayout(chartId, {
                 width: document.getElementById(chartId).clientWidth,
-                height: document.getElementById(chartId).clientHeight
+                height: document.getElementById(chartId).clientWidth * 0.66 // Maintain 4:3 aspect ratio
             });
         });
     }
