@@ -1,14 +1,14 @@
-// Define the data to use for the visuzation
+// Define the data
 var targetValue = 2484;
-var minValue = 0;
-var maxValue = 5000;
+var minValue = 4369;
+var maxValue = 8731;
 
 // Define the ranges
 var range1 = [minValue, targetValue - 1];
 var range2 = [targetValue, targetValue];
 var range3 = [targetValue + 1, maxValue];
 
-// Create the trace to show
+// Create the trace
 var trace = {
     x: [range1, range2, range3],
     y: [targetValue, targetValue, targetValue],
