@@ -1,4 +1,4 @@
-// Define the data
+// Define the data to use here
 var targetValue = 2484;
 var minValue = 4369;
 var maxValue = 8731;
