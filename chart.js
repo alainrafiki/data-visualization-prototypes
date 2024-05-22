@@ -1,5 +1,62 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Plot for myDivOne
+    var dataOne = [
+        {
+            x: [1, 2, 3],
+            y: [10, 15, 13],
+            type: 'scatter'
+        }
+    ];
+
+    var layoutOne = {
+        title: 'First Plot'
+    };
+
+    Plotly.newPlot('myDivOne', dataOne, layoutOne);
+
+    // Plot for myDivTwo
+    var dataTwo = [
+        {
+            type: "indicator",
+            mode: "gauge+number",
+            value: 120,  // 60% of 200 is 120
+            gauge: {
+                axis: { range: [0, 200] },
+                bar: { color: "darkblue" },
+                steps: [
+                    { range: [0, 40], color: "lightgray" },
+                    { range: [40, 80], color: "gray" },
+                    { range: [80, 120], color: "lightgreen" },
+                    { range: [120, 160], color: "green" },
+                    { range: [160, 200], color: "darkgreen" }
+                ],
+                threshold: {
+                    line: { color: "red", width: 4 },
+                    thickness: 0.75,
+                    value: 160
+                }
+            }
+        }
+    ];
+
+    var layoutTwo = {
+        width: 600,
+        height: 400,
+        margin: { t: 0, b: 0 }
+    };
+
+    Plotly.newPlot('myDivTwo', dataTwo, layoutTwo);
+
+    // Add more plots similarly for other divs
+});
+
+
+
+
+
+
 // Define the data
-var data = [{
+var dataThree = [{
     type: 'pie',
     hole: 0.5,
     values: [75, 25],
@@ -13,7 +70,7 @@ var data = [{
 }];
 
 // Define the layout
-var layout = {
+var layoutThree = {
     title: 'Progress Speedometer',
     showlegend: false,
     height: 400,
@@ -41,4 +98,4 @@ var layout = {
 };
 
 // Create the plot
-Plotly.newPlot('myTopDiv', data, layout);
+Plotly.newPlot('myDivThree', data, layout);
