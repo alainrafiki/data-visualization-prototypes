@@ -10,25 +10,25 @@
     <style>
         body {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             margin: 0;
         }
 
-        #myDiv1 {
+        .chart {
             width: 600px;
             height: 400px;
+            margin: 20px 0;
         }
     </style>
 </head>
 
 <body>
-    <div id="myDiv1"></div>
-    <!-- Placeholder for chart one -->
-    <div id="myDiv2" style="width: auto; height: auto;"></div>
-    <!-- Placeholder for chart three -->
-    <div id="myDiv3" style="width: auto; height: auto;"></div>
+    <div id="myDiv1" class="chart"></div>
+    <div id="myDiv2" class="chart"></div>
+    <div id="myDiv3" class="chart"></div>
 
     <script src="chart.js"></script>
 </body>
