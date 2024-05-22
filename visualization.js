@@ -15,7 +15,7 @@ var trace = {
     marker: {
         color: ['red', 'gray', 'gray'],
         line: {
-            width: 0
+            width: 2
         }
     },
     orientation: 'h',
