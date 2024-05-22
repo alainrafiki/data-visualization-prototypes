@@ -80,4 +80,4 @@ var layout = {
 };
 
 // Create the plot
-Plotly.newPlot('myDiv', [trace], layout);
+Plotly.newPlot('myBottomDiv', [trace], layout);
