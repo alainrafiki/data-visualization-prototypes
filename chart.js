@@ -176,4 +176,83 @@ document.addEventListener('DOMContentLoaded', function () {
 
     Plotly.newPlot('myDivTwo', dataTwo, layoutTwo);
 
+    // New version of plot two:
+    // Plot for myDivTwo (gauge chart with needle)
+    // Define the variables
+    var gaugeValue = 120;  // 60% of 200 is 120
+    var gaugeRange = [0, 200];
+    var layoutWidth = 600;
+    var layoutHeight = 400;
+    var layoutMargin = { t: 50, b: 50 };
+
+    // Define the data for the gauge chart with needle
+    var dataThree = [
+        {
+            type: "indicator",
+            mode: "gauge+number",
+            value: gaugeValue,
+            gauge: {
+                axis: { range: gaugeRange },
+                shape: 'angular',
+                bar: { color: 'darkblue' },
+                steps: [
+                    { range: [0, 66.67], color: "red" },
+                    { range: [66.67, 133.33], color: "yellow" },
+                    { range: [133.33, 200], color: "green" }
+                ],
+                threshold: {
+                    line: { color: "red", width: 4 },
+                    thickness: 0.75,
+                    value: gaugeValue
+                },
+                thresholdmode: 'gauge+number',
+                bgcolor: 'white',
+                borderwidth: 2,
+                bordercolor: 'gray',
+                bar: {
+                    color: 'darkblue',
+                    thickness: 0.8
+                },
+                steps: [
+                    { range: [0, 66.67], color: 'red' },
+                    { range: [66.67, 133.33], color: 'yellow' },
+                    { range: [133.33, 200], color: 'green' }
+                ]
+            }
+        },
+        {
+            type: 'scatter',
+            x: [0],
+            y: [0],
+            marker: { size: 28, color: '850000' },
+            showlegend: false,
+            name: 'Progress',
+            text: gaugeValue,
+            hoverinfo: 'text+name'
+        }
+    ];
+
+    // Define the layout for the gauge chart with needle
+    var layoutThree = {
+        width: layoutWidth,
+        height: layoutHeight,
+        margin: layoutMargin,
+        shapes: [
+            {
+                type: 'line',
+                x0: 0.5,
+                y0: 0.5,
+                x1: 0.6,
+                y1: 0.5,
+                line: {
+                    color: 'black',
+                    width: 3
+                }
+            }
+        ],
+        title: 'Progress Towards Goal'
+    };
+
+    Plotly.newPlot('myDivThree', dataThree, layoutThree);
+
 });
