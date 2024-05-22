@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         margin: layoutMargin
     };
 
-    Plotly.newPlot('myDiv', data1, layout1);
+    Plotly.newPlot('myDiv1', data1, layout1);
 
     var data2 = [
         {
