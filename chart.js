@@ -1,5 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Plot for myDivOne
+    // Define the data
     var dataOne = [
         {
             x: [1, 2, 3],
@@ -7,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'scatter'
         }
     ];
-
+    // Define the layout
     var layoutOne = {
         title: 'First Plot'
     };
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     Plotly.newPlot('myDivOne', dataOne, layoutOne);
 
     // Plot for myDivTwo
+    // Define the data
     var dataTwo = [
         {
             type: "indicator",
@@ -47,21 +49,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     Plotly.newPlot('myDivTwo', dataTwo, layoutTwo);
 
-    // Add more plots similarly for other divs
+    // Plot for myDivThree
     // Define the data
-    var dataThree = [{
-        type: 'pie',
-        hole: 0.5,
-        values: [75, 25],
-        marker: {
-            colors: ['green', 'red']
-        },
-        rotation: 90,
-        text: ['Progress', 'Remaining'],
-        textinfo: 'text',
-        hoverinfo: 'none'
-    }];
-    
+    var dataThree = [
+        {
+            type: 'pie',
+            hole: 0.5,
+            values: [75, 25],
+            marker: {
+                colors: ['green', 'red']
+            },
+            rotation: 90,
+            text: ['Progress', 'Remaining'],
+            textinfo: 'text',
+            hoverinfo: 'none'
+        }];
+
     // Define the layout
     var layoutThree = {
         title: 'Progress Speedometer',
@@ -89,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }]
     };
-    
+
     // Create the plot
     Plotly.newPlot('myDivThree', data, layout);
 });
