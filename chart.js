@@ -17,4 +17,4 @@ var layout = {
 };
 
 // Create the plot
-Plotly.newPlot('myDiv', data, layout);
+Plotly.newPlot('myTopDiv', data, layout);
