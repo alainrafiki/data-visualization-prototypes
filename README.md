@@ -1,7 +1,3 @@
-Here's a simple README for your GitHub repository:
-
----
-
 # Data Visualization Prototypes with Plotly
 
 This is a personal project where I am prototyping data visualizations using Plotly. The project includes three interactive speedometer charts displayed on a responsive webpage.
