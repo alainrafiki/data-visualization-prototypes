@@ -63,7 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
             text: ['Progress', 'Remaining'],
             textinfo: 'text',
             hoverinfo: 'none'
-        }];
+        }
+    ];
 
     // Define the layout
     var layoutThree = {
@@ -94,5 +95,5 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // Create the plot
-    Plotly.newPlot('myDivThree', data, layout);
+    Plotly.newPlot('myDivThree', dataThree, layoutThree);
 });
