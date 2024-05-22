@@ -25,7 +25,7 @@ This is a personal project where I am prototyping data visualizations using Plot
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/data-visualization-prototypes.git
+    git clone https://github.com/alainrafiki/data-visualization-prototypes.git
     ```
 2. Navigate to the project directory:
     ```bash
@@ -71,7 +71,3 @@ This is a personal project, but feel free to fork the repository and submit pull
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-Replace `your-username` with your actual GitHub username in the clone URL. This README provides an overview of the project, how to get started, and how to customize the charts.
